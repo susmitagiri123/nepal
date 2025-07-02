@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receipt </title>
+</head>
+<body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Receipt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #050505;
+    }
+#left{
+    width: 50px;
+}
+    .receipt {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border: 1px solid #d71cf0;
+      box-shadow: 0 0 10px rgba(231, 10, 132, 0.1);
+    }
+
+    .receipt h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .receipt .info, .receipt .totals {
+      margin-bottom: 20px;
+    }
+
+    .receipt .info p, .receipt .totals p {
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .receipt table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .receipt table th, .receipt table td {
+      border: 1px solid #88f30d;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .receipt .footer {
+      text-align: center;
+      font-size: 12px;
+      color: sans-serif(29, 167, 221);
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 50px 30px;
+      background: #2196f3;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #1976d2;
+    }
+
+    @media print {
+      button {
+        display: none;
+      }
+      body {
+        background: white;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+    <img id="left" src="new photo.webp">
+
+</header>
+<div class="receipt" id="receipt">
+  <h2>SUSMITA's Grocery Shop </h2>
+  <div class="info">
+    <p><strong>Date:</strong> <span id="date"></span></p>
+    <p><strong>Time:</strong> <span id="time"></span></p>
+    <p><strong>Receipt #:</strong> 001234</p>
+    <p><strong>Cashier:</strong> susmita giri</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Apple</td>
+        <td>2</td>
+        <td>Rs:10</td>
+        <td>Rs:20</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>3</td>
+        <td>Rs:10</td>
+        <td>Rs:30</td>
+      </tr>
+      <tr>
+        <td>Milk</td>
+        <td>1</td>
+        <td>Rs:100</td>
+        <td>Rs:100</td>
+      </tr>
+      <td>mango</td>
+      <td>5</td>
+      <td>Rs:15</td>
+      <td>Rs:75</td>
+    </tbody>
+  </table>
+
+  <div class="totals">
+    <p><strong>Subtotal:</strong> <span>11</span></p>
+    <p><strong>Tax (10%):</strong> <span>Rs22.5</span></p>
+    <p><strong>Total:</strong> <span>Rs 225</span></p>
+  </div>
+
+  <div class="footer">
+    Thank you for your purchase!<br>
+    Visit again!
+   
+    You may contact other facilities and delivery for 9707979361
+  </div>
+</div>
+
+<button onclick="window.print()">Print Receipt</button>
+
+<script>
+  const now = new Date();
+  document.getElementById('date').textContent = now.toLocaleDateString();
+  document.getElementById('time').textContent = now.toLocaleTimeString();
+</script>
+
+</body>
+</html>
+
+    
+</body>
+</html>
